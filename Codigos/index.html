@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="canciones">
+            <h2>Lista de Canciones</h2>
+            <div id="lista-canciones">
+
+            </div>
+        </div>
+        <div class="detalles">
+            <img id="imagen" src="" width="150px" height="100px alt="Portada del álbum">
+            <div id="detalles-cancion">
+            
+            </div>
+        </div>
+        <div class="reproduccion">
+            <button onclick="reproductor.playPause()">Play/Pause</button>
+            <button onclick="reproductor.stop()">Stop</button>
+            <button onclick="reproductor.shuffle()">Shuffle</button>
+            <button onclick="reproductor.prev()">Anterior</button>
+            <button onclick="reproductor.next()">Siguiente</button>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" src="" controls></audio> 
+
+    <script src="reproductor.js"></script>
+    <script>
+     
+        document.getElementById('lista-canciones').innerHTML = reproductor.songsList();
+ 
+        reproductor.showSongInSite();
+    </script>
+</body>
+</html>
